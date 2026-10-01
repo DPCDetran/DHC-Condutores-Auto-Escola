@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="dados-atualizados-em" content="2026-10-01T14:42:15">
-<meta name="painel-build" content="20261001144215">
+<meta name="dados-atualizados-em" content="2026-10-01T15:00:36">
+<meta name="painel-build" content="20261001150036">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Painel de Cruzamento de Endereços — DETRAN</title>
@@ -1171,7 +1171,7 @@ function updateChips(){
 
   box.querySelectorAll('.filter-chip').forEach(b=>b.onclick=()=>setState(b.dataset.key,state[b.dataset.key]));
 }
-function updateHeader(rows){el('updatedAt').textContent=document.querySelector('meta[name="dados-atualizados-em"]')?.content?'01/10/2026 14:42:15':'01/10/2026 14:42:15';const ds=rows.map(r=>r.data).filter(Boolean).sort();el('periodLabel').textContent=ds.length?`${ds[0].split('-').reverse().join('/')} a ${ds.at(-1).split('-').reverse().join('/')}`:'Sem dados'}
+function updateHeader(rows){el('updatedAt').textContent=document.querySelector('meta[name="dados-atualizados-em"]')?.content?'01/10/2026 15:00:36':'01/10/2026 15:00:36';const ds=rows.map(r=>r.data).filter(Boolean).sort();el('periodLabel').textContent=ds.length?`${ds[0].split('-').reverse().join('/')} a ${ds.at(-1).split('-').reverse().join('/')}`:'Sem dados'}
 function updateAll(){const rows=filteredData();updateHeader(rows);updateChips();updateKpis(rows);updateCharts(rows);updateRanking(rows);updateAlerts(rows);updateDetails(rows)}
 Object.entries(filters).forEach(([k,f])=>{
   f.onchange=()=>{
